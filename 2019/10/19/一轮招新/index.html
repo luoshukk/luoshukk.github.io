@@ -65,16 +65,13 @@
         <div class="content markdown">
             <p>（PS:最开始什么都不懂，以为虚拟机很麻烦，就在Windows商店里面直接装了UBUNTU，像采用子系统的方式，没想到远程连接桌面这么麻烦，使用XMING又太卡，最终因为浏览器崩溃解决不了以及装XFACE4都卡而放弃。然后尝试虚拟机，最初下的900+m的镜像，结果好像有点问题，声音调不出来，图形界面以及网络设置也需要照到百度上面一步一步完成（很多方法还行不通）。后来换了一个1.4G的镜像，发现上述东西都自带。自闭了。。。感觉浪费了1周的时间。）</p>
 <hr>
-<ul>
-<li>下面进入正题<ol>
+<h3 id="进入正题"><a href="#进入正题" class="headerlink" title="进入正题"></a>进入正题</h3><ol>
 <li>没仔细对比Centos以及Ubuntu的区别，由于最先找到的网站是Centos的，所以采用了Centos的镜像。桌面方面，个人偏好于gnome的主菜单样式，放弃了KDE。通过gnome-tweak-tool更换了主题光标指针以及壁纸，是桌面达到自己审美需求。</li>
 <li>不习惯Gnome上下任务栏的样式，通过删除/usr/share/gnome-shell中的windows-list。隐藏了下任务栏，然后自己装了dash-to-panel的插件，使上任务栏功能向下移，并且达到类似于Windows的任务栏界面，从而减少更换系统所产生的不习惯性。</li>
 <li>在装部分软件的时候发现，普通用户不能直接更改计算机磁盘里的文件，需ROOT后采用sudo命令达到移动删除等指令，亦或者通过使用ROOT账户直接进入图形界面。在这里更改了 /etc/gdm/custom.conf文件，使开机可以不通过输入密码直接使用ROOT账户登录，由于是初学者这里我也没考虑系统的安全性。</li>
-<li>（手动安装了vmware-tool，使虚拟机与主机之间可以文件共享，算优化点吗？。。)安装了oh-my-zsh，以及通过调整终端背景色和字体色，达到自己最舒服的编译界面。</li>
+<li>(手动安装了vmware-tool，使虚拟机与主机之间可以文件共享，算优化点吗？。。)安装了oh-my-zsh，以及通过调整终端背景色和字体色，达到自己最舒服的编译界面。</li>
 <li>在C语言环境方面，安装了gcc，可以直接在终端上完成C语言的编译，对于集成环境方面，还安装了codeblock ide及其的汉化包，用以应对将来更加复杂的编译工作。<br><img src="http://b182.photo.store.qq.com/psb?/V11vmaCN3emc7d/h6bAYa79i5gE9cWk8mU*KsbfQn4uIYwBsAD0mvbJ944!/c/dLYAAAAAAAAA&bo=QAaEA0AGhAMRADc!" alt="最后展示一下桌面吧（我也不清楚为什么有点糊）" title="桌面"></li>
 </ol>
-</li>
-</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
