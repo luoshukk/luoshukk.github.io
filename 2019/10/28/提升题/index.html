@@ -11,12 +11,13 @@
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
     <meta name="description" content="洛书的博客,
-宏的编写
+4个宏的编写
 
+   #define EVALUATION(x, y) ((x / y) * y)
 
-#define EVALUATION(x, y) ((x / y) * y)
-#define EVALUATION(x, y) ((x / y + 1) * y)
-#define E,"> 
+   #define EVALUATION(x, y) ((x / y + 1) * y)
+
+,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="洛书" type="application/atom+xml"> 
     <link rel="icon" href="/img/sign.png"> 
@@ -70,11 +71,12 @@
         </div>
         <div class="content markdown">
             <ul>
-<li>宏的编写</li>
-</ul>
+<li><p>4个宏的编写</p>
 <ol>
-<li><pre><code>#define EVALUATION(x, y) ((x / y) * y)</code></pre></li>
-<li><pre><code>#define EVALUATION(x, y) ((x / y + 1) * y)</code></pre></li>
+<li><p>   #define EVALUATION(x, y) ((x / y) * y)</p>
+</li>
+<li><p>   #define EVALUATION(x, y) ((x / y + 1) * y)</p>
+</li>
 <li><pre><code>#define EVALUATION(x, y) \
 n = ((x / y) * y);       \
 while (n &amp; (n - 1) == 0) \
@@ -88,6 +90,8 @@ while (n &amp; (n - 1) == 0) \
 n = n - y;               \
 }</code></pre></li>
 </ol>
+</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">

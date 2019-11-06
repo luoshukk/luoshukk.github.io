@@ -12,9 +12,10 @@
     <meta name="keywords" content="Fechin,"> 
     <meta name="description" content="洛书的博客,
 关于宏定义
+
 宏定义属于预处理指令，#define指令定义一个宏，#undef指令删除一个宏。
 定义的一般形式 #define 标识符 字符串
-#表示这是一条预处理命令(在C语言中凡是以#开头的均为,"> 
+#表示这是一条预处理命令(在C语言中凡是以#开头的均,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="洛书" type="application/atom+xml"> 
     <link rel="icon" href="/img/sign.png"> 
@@ -67,8 +68,9 @@
 
         </div>
         <div class="content markdown">
-            <ul>
-<li>关于宏定义<ol start="0">
+            <blockquote>
+<h2 id="关于宏定义"><a href="#关于宏定义" class="headerlink" title="关于宏定义"></a>关于宏定义</h2></blockquote>
+<ol>
 <li>宏定义属于预处理指令，#define指令定义一个宏，#undef指令删除一个宏。</li>
 <li>定义的一般形式 #define 标识符 字符串</li>
 <li>#表示这是一条预处理命令(在C语言中凡是以#开头的均为预处理命令) </li>
@@ -76,15 +78,14 @@
 <li>==标识符==为所定义的宏名,</li>
 <li>==字符串==可以是常数、表达式、格式串等、符号常量</li>
 </ol>
-</li>
-</ul>
 <hr>
-<ul>
-<li><p>宏的用法</p>
+<blockquote>
+<h2 id="宏的用法"><a href="#宏的用法" class="headerlink" title="宏的用法"></a>宏的用法</h2></blockquote>
 <ol>
-<li>#define函数<br>  #define DEBUG(x) ((x)+(x))<br>如上所示，用于对数值表达式进行求值的宏定义都应该用这种方式加上括号，避免在使用宏时由于参数中的操作等或邻近操作符之间不可预料的相互作用。</li>
-<li>#define替换</li>
-</ol>
+<li><p>#define函数</p>
+<pre><code>#define DEBUG(x) ((x)+(x))</code></pre><p>如上所示，用于对数值表达式进行求值的宏定义都应该用这种方式加上括号，避免在使用宏时由于参数中的操作等或邻近操作符之间不可预料的相互作用。</p>
+</li>
+<li><p>#define替换</p>
 <ul>
 <li><p>在调用宏时，首先对参数进行检查，看看是否包含任何由#define定义的符号，如果是，它们首先被替换。</p>
 </li>
@@ -94,19 +95,22 @@
 <li><p>最后，再次对结果文件进行扫描，看看它是否包含任何由#define定义的符号，如果是，就重复上述的处理过程。</p>
 </li>
 </ul>
-<ol start="3">
-<li><strong>宏参数和#define定义可以包含其他#define定义的符号，但是，宏不可以出现递归，也就是不可以自己调用自己。</strong></li>
-<li><strong>若想要在宏里面写一个大面积的代码，最好用do{…}while(0)把代码括起来，这样写会带来很多方便，比如最后人们写代码习惯加分号，还有可以使在运行时不会出现逻辑上的错误。</strong></li>
-<li>宏体换行需要在行末加反斜杠\</li>
-<li>宏定义最好使用大写字母</li>
-<li>宏参数中若包含另外的宏，那么宏参数在被代入到宏体之前会做一次完全的展开，除非宏体中含有#或##。</li>
-</ol>
 </li>
-</ul>
+<li><p><strong>宏参数和#define定义可以包含其他#define定义的符号，但是，宏不可以出现递归，也就是不可以自己调用自己。</strong></p>
+</li>
+<li><p><strong>若想要在宏里面写一个大面积的代码，最好用do{…}while(0)把代码括起来，这样写会带来很多方便，比如最后人们写代码习惯加分号，还有可以使在运行时不会出现逻辑上的错误。</strong></p>
+</li>
+<li><p>宏体换行需要在行末加反斜杠\</p>
+</li>
+<li><p>宏定义最好使用大写字母</p>
+</li>
+<li><p>宏参数中若包含另外的宏，那么宏参数在被代入到宏体之前会做一次完全的展开，除非宏体中含有#或##。</p>
+</li>
+</ol>
 <hr>
 <ul>
-<li>#的用法<br>  给一个宏的参数前面加上一个#，会把参数转换成参数代表的字面值。</li>
-<li>##的用法<br>  ##结构则执行一种不同的任务，他可以把它两边的宏符号连接成一个宏符号。作为作用之一，它允许宏定义从分离的文本段创建表示符。</li>
+<li>#的用法<br>   给一个宏的参数前面加上一个#，会把参数转换成参数代表的字面值。</li>
+<li>##的用法<br>   ##结构则执行一种不同的任务，他可以把它两边的宏符号连接成一个宏符号。作为作用之一，它允许宏定义从分离的文本段创建表示符。</li>
 </ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
