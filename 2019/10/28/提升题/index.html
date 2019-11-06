@@ -13,11 +13,11 @@
     <meta name="description" content="洛书的博客,
 4个宏的编写
 
-   #define EVALUATION(x, y) ((x / y) * y)
+#define EVALUATION(x, y) ((x / y) * y)
 
-   #define EVALUATION(x, y) ((x / y + 1) * y)
+#define EVALUATION(x, y) ((x / y + 1) * y)
 
-,"> 
+#defin,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="洛书" type="application/atom+xml"> 
     <link rel="icon" href="/img/sign.png"> 
@@ -70,28 +70,28 @@
 
         </div>
         <div class="content markdown">
-            <ul>
-<li><p>4个宏的编写</p>
+            <blockquote>
+<h3 id="4个宏的编写"><a href="#4个宏的编写" class="headerlink" title="4个宏的编写"></a>4个宏的编写</h3></blockquote>
 <ol>
-<li><p>   #define EVALUATION(x, y) ((x / y) * y)</p>
+<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">define</span> EVALUATION(x, y) ((x / y) * y)</span></code></pre>
 </li>
-<li><p>   #define EVALUATION(x, y) ((x / y + 1) * y)</p>
+<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">define</span> EVALUATION(x, y) ((x / y + 1) * y)</span></code></pre>
 </li>
-<li><pre><code>#define EVALUATION(x, y) \
-n = ((x / y) * y);       \
-while (n &amp; (n - 1) == 0) \
-{                        \
-n = n + y;               \
-}</code></pre></li>
-<li><pre><code>#define EVALUATION(x, y) \
-n = ((x / y + 1) * y);   \
-while (n &amp; (n - 1) == 0) \
-{                        \
-n = n - y;               \
-}</code></pre></li>
+<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">define</span> EVALUATION(x, y) \</span>
+n = ((x / y) * y);                    \
+<span class="keyword">while</span> (n &amp; (n - <span class="number">1</span>) == <span class="number">0</span>)        \
+{                                           \
+n = n + y;                             \
+}</code></pre>
+</li>
+<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">define</span> EVALUATION(x, y) \</span>
+n = ((x / y + <span class="number">1</span>) * y);              \
+<span class="keyword">while</span> (n &amp; (n - <span class="number">1</span>) == <span class="number">0</span>)        \
+{                                           \
+n = n - y;                              \
+}</code></pre>
+</li>
 </ol>
-</li>
-</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
